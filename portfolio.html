@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html>
+    <meta charset="UTF-8">
+    <meta name=" viewport" content="width=device-width,initial-scale=1.0" >
+    <head>
+        <style>
+            :root {
+                --bg-color: #f8f9fa;
+                --text-color: #212529;
+                --card-bg: #ffffff;
+                --primary-color:#6c757d;
+                --secondary-color: #6c757d;
+                --border-color: #000000;
+            }
+            * {
+               margin: 0;
+               padding: 0;
+               box-sizing: border-box;
+            }
+            body{
+                background-color: antiquewhite;
+                margin: 0;
+                padding: 0;
+                 font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            }
+            .navbar{
+                display: flexbox;
+                align-items: center;
+                padding: 1rem 5%;
+                justify-content: space-between;
+                background-color: aqua;
+                border-bottom: 1px solid var(rgb(3, 7, 3));
+                position: sticky;
+                top: 0;
+                z-index: 1000;
+            }
+            .logo{
+                font-size: 2.5rem;
+                font-weight:bold;
+                color: crimson;
+            }
+            .nav-links{
+                display: flex;
+                list-style: none;
+                gap: 1.5rem;
+            }
+            .nav-links a{
+                text-decoration: none;
+                color: var(black);
+                font-weight: 500;
+            }
+            #theme-toggle{
+                background: none;
+                border: none;
+                font-size: 1.2rem;
+                cursor: pointer;
+            }
+            .hero{
+                min-height: 70vh;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                text-align: center;
+                padding: 0 5%;
+            }
+            .hero h1{
+                font-size: 3rem;
+                margin-bottom: 1rem;
+            }
+            .section{
+                max-width: 1000px;
+                margin: 0 auto;
+                padding: 4rem 5%;
+            }
+            .section h2{
+                font-size: 2rem;
+                margin-bottom: 1.5rem;
+                border-bottom: 2px solid  rgb(211, 7, 7);
+                display: inline-block;
+            }
+            .highlight {
+                color: var(#160039);
+            }
+            .tagline{
+                font-size: 1.2rem;
+                margin-bottom: 2rem;
+                color: black;
+            }
+            .btn {
+                display: inline-block;
+                padding: 0.75rem 1.5rem;
+                border-radius: 6px;
+                text-decoration: none;
+                font-weight: bold;
+                margin:0.5rem;
+            }
+            .primary-btn{
+                background-color: var(--primary-color);
+                color: rgb(251, 250, 250);
+            }
+            .secondary-btn{
+                background-color: var(--secondary-color);
+                color: #ffffff;
+            }
+            .projects-grid,.skills-grid{
+                display: flex;
+                grid-template-columns: repeat(auto-fit,minmax(250px,1fr));
+                gap: 1.5rem;
+            }
+            .project-card, .skill-card {
+                background-color: var(--card-bg);
+                padding: 1.5rem;
+                border: 1px solid var(--border-color);
+                border-radius: 8px;
+            }
+            .project-tags span{
+                display: inline-block;
+                background-color:cadetblue ;
+                padding: 0.2rem 0.6rem;
+                font-size:1rem;
+                border-radius: 4px;
+                margin: 0.5rem 0.2rem 1rem 0;
+            }
+            .project-link a{
+                margin-right: 1rem;
+                color: hotpink;
+                font-weight: bold;
+            }
+            
+            
+        </style>
+    </head>
+    <BODY>
+        <div class="title">
+           <title>Portfolio</title>
+        </div>
+       <nav class="navbar">
+        <div class="logo">HY.</div>
+        <ul class="nav-links">
+            <li><a href="#About">About</a></li>
+            <li><a href="#Skill">skill</a></li>
+            <li><a href="#Projects">Projects</a></li>
+            <li><a href="#Contect">Contect</a></li>
+        </ul>
+       </nav>
+       <header class="hero">
+        <div class="hero-content">      
+            <h1> I am <span class="highlight">Himanshu Yadav</span></h1>
+            <p class="tagline">Frontend Developer crafting clean and interactive web experiences.</p>
+            <div class=" hero-buttons">
+                <a href="#Projects" class="btn primary-btn">viwe My Work</a>
+                <a href="#Contect" class="btn secondary-btn">Get In Touch</a>
+            </div>
+        </div>
+       </header>
+        <section id="adout" class="section">
+            <h2>About Me
+            </h2>
+            <p>I am a passionate frontend developer focused on building responsive, user-friendly applications using HTML, CSS, and modern JavaScript. I enjoy transforming complex problems into elegant user interfaces.
+    </p>
+        </section>
+        <section id="skill" class="section">
+            <h2>Skills</h2>
+            <div class="skills-grid">
+            <div class="skill-card">HTML </div>
+            <div class="skill-card">CSS</div>
+            <div class="skill-card">Javascript</div>     
+            </div>
+        </section>
+        <section id="projects" class="section">
+            <h2>Featured project</h2>
+            <div class="projects-grid">
+                <div class="project-card">
+                    <h3>calculater</h3>
+                    <p>fully responsive calculater
+                    </p>
+                    <div class="project-tags">
+                        <span>HTML</span><span>CSS</span><span>JavaScript</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="#" target="_blank">GitHubss</a>
+                    </div>
+                </div>
+            </div>
+                <div class="projects-grid">
+                <div class="project-card">
+                    <h3>ADMISSION form </h3>
+                    <p>fully responsive ADMISSION Form for School 
+                    </p>
+                    <div class="project-tags">
+                        <span>HTML</span><span>CSS</span><span>JavaScript</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="#" target="_blank">GitHubss</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="contact" class="section">
+            <h2>Contect Me</h2>
+            <p>Interested in working together or have a question? feel free to reach out</p>
+            <div class="contact-links">
+                <a href="mailto:himanshuayadav95@gmail.com" class="btn primary-btn">EMAIL Me</a>
+            </div>
+        </section>
+        </BODY>
+</html>
